@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(247, 247, 244);
+  font-family: Arial, sans-serif;
+  background-size: cover;  /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+header {
+  background-color: #f5e96a;
+  color: rgb(14, 9, 9);
+  text-align: center;
+  padding: 10px;
+}
+
+.search-bar {
+  text-align: center;
+  padding: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #3462d5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4061e5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #f5df60;
+  color: rgb(9, 7, 7);
+  text-align: center;
+  padding: 10px;
+}

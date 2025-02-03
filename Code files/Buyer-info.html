@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>www.bookswap.com</title>
+    <style>
+      /* Basic styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(254, 254, 253);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    background-size: cover;  /* Ensures the image covers the entire element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+      }
+
+      .container {
+        width: 400px;
+        background-color: #60dae5;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        margin-right: 20px;
+        padding-right: 50px;
+      }
+
+      .container h1 {
+        text-align: center;
+        color: #333;
+        margin-right: 20px;
+      }
+
+      /* Form styling */
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 20px;
+        margin-left: 10px;
+      }
+
+      select {
+        height: 40px;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 5px;
+      }
+
+      button {
+        width: 100%;
+        background-color: #7a8ae7;
+        color: #111;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #d4ac0d; /* Darker yellow on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Fill your details</h1>
+      <form id="myForm" action="redirect_page.html" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <input type="checkbox" id="correct" name="correct" required />
+        <label for="correct">All information is correct</label>
+
+        <button type="button" id="submitBtn">Submit</button>
+
+        <script>
+          document
+            .getElementById("submitBtn")
+            .addEventListener("click", function () {
+              if (
+                document.getElementById("name").value &&
+                document.getElementById("email").value &&
+                document.getElementById("address").value &&
+                document.getElementById("phone").value &&
+                document.getElementById("correct").checked
+              ) {
+                window.location.href = "Buyer-order.html";
+              } else {
+                alert(
+                  "Please fill in all the required fields, select an option, and confirm that all information is correct."
+                );
+              }
+            });
+        </script>
+      </form>
+    </div>
+  </body>
+</html>

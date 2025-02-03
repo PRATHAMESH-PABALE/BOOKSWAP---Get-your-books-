@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>www.bookswap.com</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        background-color: rgb(248, 248, 245);
+    background-size: cover;  /* Ensures the image covers the entire element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+      }
+
+      .info-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        margin-top: 50px;
+      }
+
+      select,
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+
+      input[type="checkbox"] {
+        margin: 8px 0;
+      }
+
+      input[type="submit"] {
+        background-color: #0c88aa;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="info-container">
+      <h2>Fill Your Information</h2>
+      <form id="info-form">
+        <input
+          type="text"
+          id="full-name"
+          placeholder="Full Name"
+          required
+        /><br />
+
+        <select id="gender" required>
+          <option value="" disabled selected>Select your gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option></select
+        ><br />
+
+        <input
+          type="text"
+          id="email"
+          placeholder="Email Address"
+          required
+        /><br />
+        <input
+          type="text"
+          id="phone"
+          placeholder="Phone Number"
+          required
+        /><br />
+
+        <input
+          type="text"
+          id="occupation"
+          placeholder="Title of the book"
+          required
+        /><br />
+
+        <input
+          type="text"
+          id="occupation"
+          placeholder="Name of the author"
+          required
+        /><br />
+
+        <input
+          type="text"
+          id="occupation"
+          placeholder="Set price for the book "
+          required
+        /><br />
+
+        <input
+          type="text"
+          id="occupation"
+          placeholder="Rate our website out of 10"
+          required
+        /><br />
+
+        <input type="checkbox" id="confirm-info" required />
+        <label for="confirm-info"
+          >I confirm that the above information is true.</label
+        ><br />
+
+        <button type="button" onclick="location.href='olx.html'">
+          CONTINUE SHOPPING
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

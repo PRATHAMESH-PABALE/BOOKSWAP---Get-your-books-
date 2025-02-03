@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #070707;
+    background-size: cover;  /* Ensures the image covers the entire element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-color: rgb(252, 252, 251);
+  }
+   
+
+header {
+  background-color: #3df146;
+  color: #090808;
+  text-align: center;
+  padding: 1em 0;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fcf8f8;
+}
+
+#hero {
+  text-align: center;
+  padding: 3em 0;
+  background-size: cover;
+
+  color: #0b0808;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #0a0a0a;
+  margin-bottom: 40px;
+  margin-top: -5px;
+}
+
+#features {
+  display: flex;
+  justify-content: space-around;
+  padding: 3em 0;
+  margin-top: -90px;
+}
+
+.feature {
+  text-align: center;
+  width: 30%;
+  background-color: #60dae5;
+  padding: 1em;
+  box-shadow: 0px 0px 10px #888888;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+footer {
+  text-align: center;
+  background-color: #3df146;
+  color: #020202;
+  padding: 1em;
+}
+
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #1e87d3;
+}
+
+button:focus,
+button:active {
+  outline: none;
+  background-color: #0a5eab;
+}
+h5 {
+  margin-left: 350px;
+  margin-top: -30px;
+  font-size: large;
+  margin-left: 20px;
+}
+data {
+  margin-left: 1200px;
+  padding: 10px 10px 20px 20px;
+}

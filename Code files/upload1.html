@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>www.bookswap.com</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: rgb(247, 247, 244);
+    background-size: cover;  /* Ensures the image covers the entire element */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+      }
+      h1 {
+        margin: 20px;
+      }
+      #upload-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+        margin-left: 300px;
+        margin-right: 300px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f8f8f8;
+      }
+      #image-preview {
+        max-width: 30%;
+        
+        display: none;
+      }
+      #upload-button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        pointer-events: none; /* Initially, button is disabled */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Upload the image of book</h1>
+    <div id="upload-container">
+      <label for="image">Upload an Image:</label>
+      <input type="file" name="image" id="image" accept="image/*" />
+      <br />
+      <img id="image-preview" src="" alt="Uploaded Image" />
+      <br />
+      <button id="upload-button">Upload</button>
+    </div>
+
+    <script>
+      const imageInput = document.getElementById("image");
+      const imagePreview = document.getElementById("image-preview");
+      const uploadButton = document.getElementById("upload-button");
+
+      imageInput.addEventListener("change", function () {
+        const file = imageInput.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            imagePreview.src = e.target.result;
+            imagePreview.style.display = "block";
+            uploadButton.style.pointerEvents = "auto"; // Enable the button
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      uploadButton.addEventListener("click", function () {
+        if (!imageInput.files[0]) {
+          alert('Please upload an image before clicking the "Upload" button.');
+        } else {
+          window.location.href = "seller-info.html"; // Redirect to the next page
+        }
+      });
+    </script>
+  </body>
+</html>
